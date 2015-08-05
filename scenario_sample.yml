@@ -1,0 +1,14 @@
+- node: anyhost-01
+  itamae:
+    - /tmp/nginx.rb
+    - /tmp/mysql.rb
+    - node_json: /tmp/attr.js
+      log_level: info
+---
+anyhost-01:
+  host: 172.30.4.225
+  ssh_opts:
+    port: 10022
+    user: hiraishi_yosuke
+    key:  ~/.ssh/id_rsa_hiraishi
+---
