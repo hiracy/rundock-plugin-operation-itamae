@@ -1,0 +1,14 @@
+- node: anyhost-01
+  itamae:
+    - /local/path/to/nginx.rb
+    - /local/path/to/mysql.rb
+    - node_json: /local/path/to/attr.js
+      log_level: info
+---
+anyhost-01:
+  host: 192.168.10.11
+  ssh_opts:
+    port: 22
+    user: anyuser
+    key:  ~/.ssh/id_rsa
+---
