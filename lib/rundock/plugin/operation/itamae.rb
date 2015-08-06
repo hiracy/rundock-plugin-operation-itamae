@@ -28,10 +28,14 @@ module Rundock
           arg.each { |k, v| options[k] = v } if arg.is_a?(Hash)
         end
 
-        options[:log_level] = 'info' unless options[:log_level]
-        ::Itamae::Logger.level = ::Logger.const_get(options[:log_level].upcase)
-        ::Itamae::Logger.formatter.colored = options[:color]
-        ::Itamae::Runner.run(recipe_files, :local, options)
+        unless recipe_files.empty?
+          options[:log_level] = 'info' unless options[:log_level]
+          options[:color] = true unless options[:color]
+          ::Itamae::Logger.level = ::Logger.const_get(options[:log_level].upcase)
+          ::Itamae::Logger.formatter.colored = options[:color]
+          ::Itamae::Runner.run(recipe_files, :ssh, options)
+        end
+      end
       end
     end
   end
