@@ -34,7 +34,14 @@ module Rundock
           options[:color] = true unless options[:color]
           ::Itamae::Logger.level = ::Logger.const_get(options[:log_level].upcase)
           ::Itamae::Logger.formatter.colored = options[:color]
-          ::Itamae::Runner.run(recipe_files, :ssh, options)
+
+          if options[:host] == 'localhost' || options[:host] == '127.0.1'
+            type = :local
+          else
+            type = :ssh
+          end
+
+          ::Itamae::Runner.run(recipe_files, type, options)
         end
       end
 
