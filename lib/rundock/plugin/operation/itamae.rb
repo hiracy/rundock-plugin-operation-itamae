@@ -29,6 +29,7 @@ module Rundock
         end
 
         unless recipe_files.empty?
+          options.merge!(filter_itamae_ssh_opts(attributes[:nodeinfo])) if attributes[:nodeinfo]
           options[:log_level] = 'info' unless options[:log_level]
           options[:color] = true unless options[:color]
           ::Itamae::Logger.level = ::Logger.const_get(options[:log_level].upcase)
@@ -36,6 +37,13 @@ module Rundock
           ::Itamae::Runner.run(recipe_files, :ssh, options)
         end
       end
+
+      private
+
+      def filter_itamae_ssh_opts(options)
+        opts = {}
+        [:host, :user, :key, :port].each { |o| opts[o] = options[o] }
+        opts
       end
     end
   end
