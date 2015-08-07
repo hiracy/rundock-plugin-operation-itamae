@@ -5,6 +5,10 @@
 ## Installation
 
 ```
+$ gem install rundock
+```
+
+```
 $ gem install rundock-plugin-operation-itamae
 ```
 
@@ -27,6 +31,10 @@ anyhost-01:                               # see rundock options(https://github.c
     user: anyuser
     key:  ~/.ssh/id_rsa
 ```
+
+and execute rundock.
+
+    $ rundock do /path/to/your-dir/scenario.yml
 
 ## Contributing
 
