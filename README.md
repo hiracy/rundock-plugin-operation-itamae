@@ -1,4 +1,4 @@
-# Rundock::Plugin::Operation::Itamae [![Gem Version](https://badge.fury.io/rb/rundock-plugin-operation-itamae.svg)](http://badge.fury.io/rb/rundock-plugin-operation-itamae) [![Circle CI](https://circleci.com/gh/hiracy/rundock-plugin-operation-itamae/tree/master.svg?style=svg)](https://circleci.com/gh/hiracy/rundock-plugin-operation-itamae/tree/master)
+# Rundock::Plugin::Operation::Itamae [![Gem Version](https://badge.fury.io/rb/rundock-plugin-operation-itamae.svg)](http://badge.fury.io/rb/rundock-plugin-operation-itamae) [![Circle CI](https://circleci.com/gh/hiracy/rundock-plugin-operation-itamae/tree/master.png?style=shield)](https://circleci.com/gh/hiracy/rundock-plugin-operation-itamae/tree/master)
 
 [Rundock](https://github.com/hiracy/rundock) plugin for [itamae](https://github.com/itamae-kitchen/itamae) operation.
 
