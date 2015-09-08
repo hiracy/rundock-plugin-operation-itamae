@@ -32,8 +32,9 @@ module Rundock
           options.merge!(filter_itamae_ssh_opts(attributes[:nodeinfo])) if attributes[:nodeinfo]
           options[:log_level] = 'info' unless options[:log_level]
           options[:color] = true unless options[:color]
-          ::Itamae::Logger.level = ::Logger.const_get(options[:log_level].upcase)
-          ::Itamae::Logger.formatter.colored = options[:color]
+
+          ::Itamae.logger.level = ::Logger.const_get(options[:log_level].upcase)
+          ::Itamae.logger.formatter.colored = options[:color]
 
           if options[:host] == 'localhost' || options[:host] == '127.0.1'
             type = :local
