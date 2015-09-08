@@ -1,4 +1,4 @@
-- node: anyhost-01
+- target: anyhost-01
   itamae:
     - spec/integration/itamae/test.rb
     - node_json: spec/integration/itamae/attr.js
