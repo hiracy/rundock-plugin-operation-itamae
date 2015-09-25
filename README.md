@@ -17,7 +17,7 @@ $ gem install rundock-plugin-operation-itamae
 Edit your operation scenario to "[scenario.yml](https://github.com/hiracy/rundock/blob/master/scenario_sample.yml)" like this sample.
 
 ```
-- node: anyhost-01
+- target: anyhost-01
   itamae:
     - /local/path/to/nginx.rb             # itamae recipe
     - /local/path/to/mysql.rb
