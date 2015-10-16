@@ -22,5 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'serverspec', '~> 2.1'
   spec.add_development_dependency "rundock"
-  spec.add_runtime_dependency     "itamae"
+  spec.add_runtime_dependency     "itamae", ">= 1.5.0"
 end
